@@ -1,0 +1,225 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 10% 10%, #0b1220, #020617);
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+/* ================= HERO INTRO ================= */
+#hero {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(1200px 600px at 50% 50%, #0b1220, #020617);
+  animation: heroOut 1s ease forwards;
+  animation-delay: 2.4s;
+}
+
+#hero h1 {
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(34,211,238,.6);
+  animation: popIn .9s ease forwards;
+}
+
+#hero p {
+  margin-top: 10px;
+  color: #c7d2fe;
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeIn .8s ease forwards;
+  animation-delay: .6s;
+}
+
+@keyframes popIn {
+  from { transform: scale(.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes heroOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  padding: 22px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  box-shadow: 0 10px 30px rgba(124,58,237,.35);
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 10px;
+}
+
+.card {
+  background: linear-gradient(180deg, #020617, #0b1220);
+  padding: 22px;
+  margin-bottom: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(124,58,237,.25);
+  box-shadow: 0 20px 60px rgba(2,6,23,.8);
+  transition: transform .25s ease, box-shadow .25s ease, border .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 90px rgba(124,58,237,.25);
+  border-color: rgba(34,211,238,.55);
+}
+
+.card h2 {
+  margin: 0 0 16px;
+  color: #c7d2fe;
+}
+
+/* ================= INPUTS ================= */
+input {
+  padding: 12px;
+  width: 65%;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus {
+  border-color: #22d3ee;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  padding: 12px 18px;
+  margin-left: 6px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7c3aed, #22d3ee);
+  color: #020617;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(34,211,238,.35);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 45px rgba(124,58,237,.45);
+  filter: brightness(1.05);
+}
+
+/* ================= FILTERS ================= */
+.filters {
+  margin-top: 14px;
+}
+
+.filters button {
+  background: #020617;
+  color: #a5b4fc;
+  border: 1px solid rgba(165,180,252,.35);
+  box-shadow: inset 0 0 0 1px rgba(34,211,238,.15);
+}
+
+/* ================= TASK LIST ================= */
+#taskList li {
+  list-style: none;
+  padding: 12px;
+  margin-top: 12px;
+  background: #020617;
+  border-radius: 14px;
+  border: 1px solid rgba(34,211,238,.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background .2s ease, border .2s ease;
+}
+
+#taskList li:hover {
+  background: #0b1220;
+  border-color: rgba(124,58,237,.55);
+}
+
+/* ================= HABITS ================= */
+#habitList li {
+  list-style: none;
+  padding: 14px;
+  margin-top: 12px;
+  background: #020617;
+  border-radius: 14px;
+  border: 1px solid rgba(236,72,153,.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#habitList button {
+  background: linear-gradient(90deg, #ec4899, #a855f7);
+  color: #020617;
+}
+
+/* ================= POMODORO ================= */
+#timer {
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #22d3ee;
+  text-shadow: 0 0 25px rgba(34,211,238,.65);
+}
+
+/* ================= ANALYTICS ================= */
+.card p {
+  margin: 8px 0;
+  color: #c7d2fe;
+}
+
+/* ================= SETTINGS ================= */
+.card:last-child button {
+  background: linear-gradient(90deg, #ef4444, #fb7185);
+  color: #020617;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 700px) {
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .filters button {
+    width: auto;
+  }
+}

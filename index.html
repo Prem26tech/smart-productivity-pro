@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Productivity Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ================= HERO INTRO ================= -->
+  <div id="hero">
+    <h1>Smart Productivity Pro</h1>
+    <p>Build habits. Focus deep. Win daily.</p>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <h1>📘 Smart Productivity Pro</h1>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <div class="container">
+
+    <!-- ================= TASKS ================= -->
+    <section class="card">
+      <h2>📝 Tasks</h2>
+
+      <input
+        id="taskInput"
+        type="text"
+        placeholder="Enter a task"
+      />
+      <button id="addBtn">Add Task</button>
+
+      <div class="filters">
+        <button onclick="showAll()">All</button>
+        <button onclick="showPending()">Pending</button>
+        <button onclick="showCompleted()">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- ================= HABITS ================= -->
+    <section class="card">
+      <h2>🔥 Habit Tracker</h2>
+
+      <input
+        id="habitInput"
+        type="text"
+        placeholder="Add a daily habit (Gym, Coding...)"
+      />
+      <button id="addHabitBtn">Add Habit</button>
+
+      <ul id="habitList"></ul>
+    </section>
+
+    <!-- ================= POMODORO ================= -->
+    <section class="card">
+      <h2>⏱ Pomodoro Timer</h2>
+
+      <div id="timer">25:00</div>
+
+      <button onclick="startPomodoro()">Start</button>
+      <button onclick="resetPomodoro()">Reset</button>
+
+      <p>Sessions completed: <span id="sessions">0</span></p>
+    </section>
+
+    <!-- ================= ANALYTICS ================= -->
+    <section class="card">
+      <h2>📊 Analytics</h2>
+
+      <p>Total Tasks: <span id="totalTasks">0</span></p>
+      <p>Completed Tasks: <span id="completedTasks">0</span></p>
+      <p>Total Habits: <span id="totalHabits">0</span></p>
+    </section>
+
+    <!-- ================= SETTINGS ================= -->
+    <section class="card">
+      <h2>⚙️ Settings</h2>
+      <button onclick="resetAll()">Reset All Data</button>
+    </section>
+
+  </div>
+
+  <!-- ================= JS ================= -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
